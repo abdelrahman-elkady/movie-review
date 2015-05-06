@@ -6,9 +6,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-# Using bower
-config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
-
 module MovieReview
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -25,5 +22,10 @@ module MovieReview
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+
+    # Using bower
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
+
   end
 end
