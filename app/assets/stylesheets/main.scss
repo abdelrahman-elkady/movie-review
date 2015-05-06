@@ -4,7 +4,15 @@
 body {
   padding-top: 70px;
 }
-.form-centered {
+.centered {
   margin: 0 auto;
   text-align: center;
+}
+.form-centered {
+  @extend .centered;
+  width: 50%;
+}
+.custom-link{
+  display:inline-block;
+  margin-top: 10px;
 }
