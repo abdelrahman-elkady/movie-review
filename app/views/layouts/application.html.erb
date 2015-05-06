@@ -8,6 +8,8 @@
   </head>
   <body>
 
+    <%= render partial: 'layouts/nav' %>
+
     <% flash.each do |name,message|%>
       <div class="alert alert-info">
         <%= message %>
