@@ -9,6 +9,10 @@
   <body>
     <%= render partial: 'layouts/nav' %>
 
+    
+
+    <%= yield %>
+
     <% flash.each do |name,message|%>
 
       <script type="text/javascript">
@@ -19,6 +23,5 @@
 
     <%end%>
 
-    <%= yield %>
   </body>
 </html>
