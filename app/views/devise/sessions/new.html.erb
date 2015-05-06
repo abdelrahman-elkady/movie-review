@@ -1,3 +1,11 @@
+<% content_for :script_bottom do %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(':checkbox').radiocheck();
+    });
+  </script>
+<% end %>
+
 <div class="container centered">
   <h2>Log in</h2>
   <div class="form-centered">

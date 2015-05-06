@@ -9,7 +9,7 @@
   <body>
     <%= render partial: 'layouts/nav' %>
 
-    
+
 
     <%= yield %>
 
@@ -22,6 +22,8 @@
       </script>
 
     <%end%>
+
+    <%= yield :script_bottom  %>
 
   </body>
 </html>
