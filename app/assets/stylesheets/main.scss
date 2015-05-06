@@ -12,7 +12,18 @@ body {
   @extend .centered;
   width: 50%;
 }
-.custom-link{
-  display:inline-block;
+.custom-link {
+  display: inline-block;
   margin-top: 10px;
+}
+.danger-zone {
+  color: #a94442;
+  p {
+    margin: 20px 0;
+  }
+  background: #f2dede;
+  border: 1px solid transparentize(#a94442,.5);
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 4px;
 }
