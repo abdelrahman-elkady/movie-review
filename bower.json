@@ -1,0 +1,19 @@
+{
+  "name": "movie-review",
+  "version": "0.0.0",
+  "authors": [
+    "kady <elkadyabdelrahman@gmail.com>"
+  ],
+  "description": "movie review app clone",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}
