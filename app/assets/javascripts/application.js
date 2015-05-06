@@ -15,3 +15,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require 'flat-ui/dist/js/flat-ui'
+//= require 'remarkable-bootstrap-notify/dist/bootstrap-notify'
+//= require 'growl'

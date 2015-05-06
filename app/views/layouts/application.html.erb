@@ -7,16 +7,18 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-
     <%= render partial: 'layouts/nav' %>
 
     <% flash.each do |name,message|%>
-      <div class="alert alert-info">
-        <%= message %>
-      </div>
+
+      <script type="text/javascript">
+          $(window).load(function(){
+            notifyMe("<%= message.to_s %>");
+          });
+      </script>
+
     <%end%>
 
     <%= yield %>
-
   </body>
 </html>

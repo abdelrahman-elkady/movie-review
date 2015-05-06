@@ -16,6 +16,7 @@
   "dependencies": {
     "bootstrap": "~3.3.4",
     "flat-ui": "~2.2.2",
-    "fontawesome": "~4.3.0"
+    "fontawesome": "~4.3.0",
+    "remarkable-bootstrap-notify": "~3.1.3"
   }
 }
