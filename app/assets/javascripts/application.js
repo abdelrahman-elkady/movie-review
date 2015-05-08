@@ -17,5 +17,6 @@
 //= require 'flat-ui/dist/js/flat-ui'
 //= require 'flat-ui/js/radiocheck'
 //= require 'remarkable-bootstrap-notify/dist/bootstrap-notify'
+//= require 'jasny-bootstrap/dist/js/jasny-bootstrap'
 //= require 'growl'
 //= require 'main'

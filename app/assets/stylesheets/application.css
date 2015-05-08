@@ -14,6 +14,7 @@
  *= require 'bootstrap/dist/css/bootstrap'
  *= require 'flat-ui/dist/css/flat-ui'
  *= require 'fontawesome/css/font-awesome'
+ *= require 'jasny-bootstrap/dist/css/jasny-bootstrap'
  *= require 'animate'
  *= require 'main'
  */
