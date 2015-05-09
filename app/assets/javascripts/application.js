@@ -10,13 +10,14 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require turbolinks
 //= require 'bootstrap/dist/js/bootstrap'
 //= require jquery
-//= require jquery_ujs
+//= require 'jquery-ujs/src/rails'
+//= require turbolinks
 //= require 'flat-ui/dist/js/flat-ui'
 //= require 'flat-ui/js/radiocheck'
 //= require 'remarkable-bootstrap-notify/dist/bootstrap-notify'
 //= require 'jasny-bootstrap/dist/js/jasny-bootstrap'
 //= require 'growl'
+//= require 'movies'
 //= require 'main'

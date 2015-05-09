@@ -1,9 +1,10 @@
+$btn-primary-color: #1abc9c;
 /*
  * To get under bootstrap's fixed navbar
  */
 body {
   padding-top: 70px;
-  padding-bottom:70px;
+  padding-bottom: 70px;
 }
 .centered {
   margin: 0 auto;
@@ -30,4 +31,13 @@ body {
 }
 #checkbox-label {
   font-size: 15px;
+}
+#hidden-file-upload {
+  display: none;
+}
+#visible-file-upload-btn {
+  color: #fff;
+  background-color: $btn-primary-color;
+  border: 1px solid lighten(#1abc9c,30%);
+  border-left:none;
 }

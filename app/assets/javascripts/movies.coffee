@@ -1,3 +1,11 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+# For file upload styling (transferring data to hidden field)
+$(document).ready ->
+  $realInputField = $('#hidden-file-upload')
+
+  # drop just the filename in the display field
+  $realInputField.change ->
+    $('#visible-file-upload-input').val $(@).val().replace(/^.*[\\\/]/, '')
+
+  # trigger the real input field click to bring up the file selection dialog
+  $('#visible-file-upload-btn').click ->
+    $realInputField.click()
