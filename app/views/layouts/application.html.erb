@@ -8,22 +8,16 @@
   </head>
   <body>
     <%= render partial: 'layouts/nav' %>
-
-
-
-    <%= yield %>
-
+    <div class="centered">
+      <%= yield %>
+    </div>
     <% flash.each do |name,message|%>
-
       <script type="text/javascript">
-          $(window).load(function(){
-            notifyMe("<%= message.to_s %>");
-          });
+        $(window).load(function(){
+          notifyMe("<%= message.to_s %>");
+        });
       </script>
-
     <%end%>
-
     <%= yield :script_bottom  %>
-
   </body>
 </html>

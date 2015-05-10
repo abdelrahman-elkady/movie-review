@@ -1,7 +1,16 @@
-<div class='container centered'>
+<div class='centered'>
   <h1>Editing Movie</h1>
   <%= render 'form' %>
   <%= link_to movies_path do%>
     <button type="button" name="button" class='btn btn-danger btn-wide' style='margin-top:15px;'>Cancel</button>
   <% end %>
+  <div class="form-center">
+    <div class="danger-zone">
+      <h5>Danger Zone</h5>
+      <p>
+        Do you really want to delete this movie ?
+    </p>
+      <%= button_to "Delete", :movie , data: { confirm: "Are you Sure ??" }, method: :delete , class: 'btn btn-danger btn-wide'%>
+    </div>
+  </div>
 </div>
