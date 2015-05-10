@@ -1,5 +1,7 @@
-<h1>New Review</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', reviews_path %>
+<div class="container centered">
+  <h1>Write a Review</h1>
+  <%= render 'form' %>
+  <%= link_to @movie do%>
+    <button type="button" name="button" class='btn btn-danger btn-wide' style='margin-top:15px;'>Cancel</button>
+  <% end %>
+</div>

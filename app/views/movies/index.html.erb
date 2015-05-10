@@ -6,9 +6,18 @@
           <%= image_tag(movie.image.url(:medium) , class: 'img-responsive' )%>
           <div class="item-caption">
             <p class='item-title'>Title here <span class='pull-right item-rate'><i class='fa fa-star'></i>2.5</span></p>
+
+
             <%= link_to movie do %>
               <i class='fa fa-comment item-view'></i>
             <% end %>
+
+            <% if current_user.present? and current_user.id == movie.user_id %>
+              <%= link_to edit_movie_path(movie) do %>
+                <i class='fa fa-pencil item-view'></i>
+              <% end %>
+            <% end %>
+
           </div>
         </div>
       </div>

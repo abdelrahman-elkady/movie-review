@@ -1,6 +1,7 @@
-<h1>Editing Movie</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @movie %> |
-<%= link_to 'Back', movies_path %>
+<div class='container centered'>
+  <h1>Editing Movie</h1>
+  <%= render 'form' %>
+  <%= link_to movies_path do%>
+    <button type="button" name="button" class='btn btn-danger btn-wide' style='margin-top:15px;'>Cancel</button>
+  <% end %>
+</div>

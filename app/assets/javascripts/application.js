@@ -19,5 +19,7 @@
 //= require 'remarkable-bootstrap-notify/dist/bootstrap-notify'
 //= require 'jasny-bootstrap/dist/js/jasny-bootstrap'
 //= require 'growl'
+//= require 'raty/lib/jquery.raty'
 //= require 'movies'
+//= require 'reviews'
 //= require 'main'

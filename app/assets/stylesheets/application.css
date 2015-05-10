@@ -16,5 +16,7 @@
  *= require 'fontawesome/css/font-awesome'
  *= require 'jasny-bootstrap/dist/css/jasny-bootstrap'
  *= require 'animate'
+ *= require 'raty/lib/jquery.raty.css'
  *= require 'main'
+ *= require 'reviews'
  */
