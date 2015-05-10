@@ -1,3 +1,13 @@
+<% content_for :script_bottom do %>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#rating').raty({
+        scoreName: 'review[rate]',
+        starType: 'i'
+      });
+    });
+  </script>
+<% end %>
 <%= form_for([@movie,@review]) do |f| %>
   <div class="form-center">
     <% if @review.errors.any? %>
