@@ -1,4 +1,5 @@
-$btn-primary-color: #1abc9c;
+@import "base/_variables.scss";
+@import "base/_typography.scss";
 /*
  * To get under bootstrap's fixed navbar
  */
@@ -37,7 +38,49 @@ body {
 }
 #visible-file-upload-btn {
   color: #fff;
-  background-color: $btn-primary-color;
-  border: 1px solid lighten(#1abc9c,30%);
-  border-left:none;
+  background-color: $primary-color;
+  border: 1px solid lighten($primary-color,30%);
+  border-left: none;
+}
+.item-wrap {
+  position: relative;
+  height: 650px;
+  width: 400px;
+  border: 5px $primary-color solid;
+  border-radius: 4px;
+  img {
+    position: absolute;
+    top: 0;
+    height: 85%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .item-caption {
+    background-color: $primary-dark;
+    position: absolute;
+    bottom: 0;
+    height: 15%;
+    width: 100%;
+  }
+  .item-title {
+    font-family: $body-info-font;
+    font-weight: 700;
+    padding-left: 20px;
+    padding-top: 10px;
+    color: white;
+  }
+  .item-rate {
+    padding-right: 20px;
+    i {
+      padding-right:5px;
+      color:gold;
+    }
+  }
+
+  .item-view {
+    font-size:25px;
+    margin-right:20px;
+    margin-bottom:15px;
+    float:right;
+  }
 }

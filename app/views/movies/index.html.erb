@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <% @movies.each do |movie| %>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="item-wrap">
+          <%= image_tag(movie.image.url(:medium) , class: 'img-responsive' )%>
+          <div class="item-caption">
+            <p class='item-title'>Title here <span class='pull-right item-rate'><i class='fa fa-star'></i>2.5</span></p>
+            <%= link_to movie do %>
+              <i class='fa fa-comment item-view'></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
