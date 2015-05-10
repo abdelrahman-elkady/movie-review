@@ -4,7 +4,7 @@
       <div class="item-wrap">
         <%= image_tag(movie.image.url(:medium) , class: 'img-responsive' )%>
         <div class="item-caption">
-          <p class='item-title'><%= movie.title%> <span class='pull-right item-rate'><i class='fa fa-star'></i>2.5</span></p>
+          <p class='item-title'><%= movie.title%> <span class='pull-right item-rate'><i class='fa fa-star'></i><%= movie.avg_rate %></span></p>
           <%= link_to movie do %>
             <i class='fa fa-comment item-control'></i>
           <% end %>
