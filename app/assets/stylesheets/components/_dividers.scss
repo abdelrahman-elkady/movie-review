@@ -1,0 +1,23 @@
+/*
+ * Dividers
+ */
+.divider-1 {
+  width: 100px;
+  height: 1px;
+  background-color: $primary-color;
+}
+.divider-2 {
+  @extend .divider-1;
+  height: 2px;
+}
+.divider-3 {
+  @extend .divider-1;
+  height: 3px;
+}
+.divider-4 {
+  @extend .divider-1;
+  height: 4px;
+}
+.divider-dark {
+  background-color: $primary-dark;
+}
