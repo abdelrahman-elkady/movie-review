@@ -1,3 +1,16 @@
+<%content_for :script_bottom do%>
+  <script>
+    $('.review-rating').raty({
+      path: '/assets/',
+      readOnly: true,
+      starType: 'i',
+      score: function() {
+            return $(this).attr('data-score');
+    }
+      });
+  </script>
+<%end%>
+<!-- end of content_for -->
 <div class="row">
   <div class="col-md-6 col-sm-12">
     <%= image_tag @movie.image.url(:large) , class: 'center-block'%>
@@ -43,4 +56,65 @@
       </table>
     </div>
   </div>
+</div>
+<!-- Silly divider ! -->
+<div class="container section">
+  <div class="divider-2 divider-wide divider-dark centered"></div>
+</div>
+<div class="centered">
+  <h2>Reviews</h2>
+  <div class="divider-2 centered"></div>
+</div>
+<!-- Reviews Sections -->
+<div class="row">
+  <%if !user_signed_in?%>
+    <div class="container section">
+      <div class="jumbotron sign-in-announce">
+        <h3>Sign in now to write your review</h3>
+        <%= link_to 'Sign in' , :new_user_session , class: 'btn btn-wide btn-primary' %>
+      </div>
+    </div>
+  <% else %>
+    <div class="row centered section">
+      <%= link_to 'Create Review' , new_movie_review_path(@movie) , class: 'btn btn-wide btn-primary btn-hg' %>
+    </div>
+  <%end%>
+  <!-- end if -->
+</div>
+<!-- /row -->
+<div class="container section">
+  <%@movie.reviews.each do |review|%>
+    <div class="row">
+      <div class="reviews-section">
+        <div class="review-rating" data-score = '<%= review.rate%>'></div>
+        <div id='user-info'>
+          <p>
+            <span class='info-block'><i class='fa fa-user'></i> <%= review.user.email %></span>
+            <span class='info-block'><i class='fa fa-calendar'></i> <%= time_ago_in_words review.updated_at %> ago</span>
+          </p>
+        </div>
+        <div class="review-body">
+          <p>
+            <%= review.comment %>
+          </p>
+        </div>
+        <%if user_signed_in? and current_user.id == review.user.id %>
+          <div class="review-controls">
+            <%= link_to [:edit , @movie , review] do%>
+              <i class='fa fa-pencil'></i>
+            <%end%>
+            <!-- end link_to -->
+            <%= link_to [@movie,review] , method: :delete , data: {confirm: 'Are you sure you want to delete your review ?'} do%>
+              <i class='fa fa-trash-o delete'></i>
+            <%end%>
+            <!-- end link_to -->
+          </div>
+        <%end%>
+        <!-- end if -->
+      </div>
+      <!-- /reviews-section -->
+    </div>
+    <!-- /row -->
+  <%end%>
+  <!-- end each -->
 </div>
