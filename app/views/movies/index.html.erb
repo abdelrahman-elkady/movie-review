@@ -17,9 +17,9 @@
       </div>
     </div>
   <% end %>
-  <%if user_signed_in?%>
-    <div class="movie-create">
-      <%= button_to "New Movie", :new_movie , method: :get , class: 'btn btn-success btn-hg'%>
-    </div>
-  <%end%>
 </div>
+<%if user_signed_in?%>
+  <div class="row">
+    <%= button_to "New Movie", :new_movie , method: :get , class: 'btn btn-success btn-hg pull-right'%>
+  </div>
+<%end%>
