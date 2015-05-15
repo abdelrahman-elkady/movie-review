@@ -4,7 +4,11 @@ class MoviesController < ApplicationController
   helper :movies
 
   def index
-    @movies = Movie.all
+    if params[:search].present?
+      @movies = Movie.search(params[:search]), misspellings: {edit_distance: 2}
+    else
+      @movies = Movie.all
+    end
   end
 
   def show
