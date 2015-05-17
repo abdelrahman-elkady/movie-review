@@ -80,13 +80,19 @@
     </div>
   <%end%>
   <!-- end if -->
+  <div class="form-center">
+    <div class="review-overall-rating">
+      <h5>Average Rating</h5>
+      <div class="review-rating" data-score = '<%= @movie.avg_rate %>'></div>
+    </div>
+  </div>
 </div>
 <!-- /row -->
 <div class="container section">
   <%@movie.reviews.each do |review|%>
     <div class="row">
+      <div class="review-rating" data-score = '<%= review.rate %>'></div>
       <div class="reviews-section">
-        <div class="review-rating" data-score = '<%= review.rate%>'></div>
         <div id='user-info'>
           <p>
             <span class='info-block'><i class='fa fa-user'></i> <%= review.user.email %></span>

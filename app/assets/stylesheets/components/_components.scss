@@ -103,3 +103,12 @@
     }
   }
 }
+.review-overall-rating {
+  @extend .danger-zone;
+  background-color: lighten($primary-color, 40%);
+  border-color: transparentize($primary-color,.5);
+  color: $primary-dark;
+  .review-rating {
+    color: $primary-danger;
+  }
+}
